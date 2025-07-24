@@ -1,0 +1,41 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+header{
+  height: 8000px;
+}
+
+.sticky-main{
+  position: sticky;
+  top: 10px;
+}
+
+main{
+  background-color: white;
+  /* height: 8000px; */
+}
+
+section{
+  height: 80%;
+}
+
+li{
+  margin: 10px;
+}
+
+.header-eliments{
+  border: 1px solid black;
+
+  color: white;
+  background-color: black;
+
+  list-style-type : none;
+
+  display: flex;
+  flex-direction: row;
+
+  height: 100px;
+  line-height: 100px;
+}
