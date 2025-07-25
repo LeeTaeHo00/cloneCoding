@@ -1,3 +1,6 @@
+
+/* ------------------------------------------------------기초 설정----------------------------------------------------------- */
+
 *{
   padding: 0;
   margin: 0;
@@ -14,27 +17,25 @@ header{
 }
 
 main{
-  background-color: olive;
-  height: fit-content;
+  background-color: #f5f5f5;
+  /* height: fit-content; */
 }
 
 footer{
-  background-color: red;
-  width: 80%;
-  height: 300px;
+  background-color:#f0f0f0;
 }
 
-li{
-  margin: 5px;
-}
+/* ------------------------------------------------------처음부터 따라다닐 메뉴----------------------------------------------------------- */
 
 .fix-header{
   position: fixed;
   top:0px;
   width: 80%;
+  display: flex;
+  justify-content:space-around;
 }
 
-.fix-header-eliments{
+.fix-header-right-eliments{
   border: 1px solid black;
 
   color: white;
@@ -42,17 +43,55 @@ li{
 
   list-style-type : none;
 
+  justify-content: right;
+
   display: flex;
   flex-direction: row;
-  justify-content: start;
   align-items: center;
   height: 80px;
+  flex:1;
 }
+
+.fix-header-left-eliments{
+  border: 1px solid black;
+
+  color: white;
+  background-color: black;
+
+  list-style-type : none;
+
+  justify-content: left;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  
+
+  height: 80px;
+  flex:1;
+}
+
+.fix-header-list{
+  padding: 8px;
+}
+
+/* ------------------------------------------------------검색창 안따라다님---------------------------------------------------------- */
 
 .static-main-search{
   border: 1px solid black;
-  background-color: burlywood;
+  background-color: black;
+  color:white;
+
+  display: flex;
+  flex-direction: column;
 }
+
+.static-main-search-elements{
+  padding: 15px;
+}
+
+/* ------------------------------------------------------따라다닐 메뉴----------------------------------------------------------- */
 
 .sticky-main{
   position: sticky;
@@ -74,12 +113,19 @@ li{
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  height: 80px;
+  height: auto;
 }
+
+.sticky-main-list{
+  padding: 10px;
+}
+
+/* ------------------------------------------------------메인 메인 상품(이벤트)----------------------------------------------------------- */
 
 .static-main-mainproduct{
   display: flex;
   justify-content: center;
+  padding: 10px;
 }
 
 .static-main-mainproduct-elements{
@@ -93,11 +139,12 @@ li{
 
 }
 
+/* ------------------------------------------------------메인 카테고리 부분----------------------------------------------------------- */
+
 .static-main-category{
   display: flex;
   justify-content: center;
-  border: 5px solid lightgray;
-  background-color: lightgray;
+  border: 1px solid whitesmoke;
   width: fit-content;
   max-width:100%;
 
@@ -111,42 +158,151 @@ li{
   border: 1px solid grey;
   background-color: white;
   justify-content: space-around;
-  display: block;
+  
   width: auto;
   max-width: 15%;
-  padding: 10px;
-  margin: 5px;
-  border-radius: 10px;
+  padding: 2px;
+  margin: 2px;
+  border-radius: 6px;
+  display: flex;
 }
+
+/* ------------------------------------------------------HighLight 메인 중간----------------------------------------------------------- */
 
 
 .static-main-highlight{
-  border: 1px solid orange;
-  background-color: orange;
-
+  padding: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  height:auto;
+  justify-content:space-evenly;
   flex-wrap: wrap;
-}
-
-.static-main-highlight-elements{
-  border: 5px solid red;
-  background-color: pink;
-  width: 230px;
-  height: 230px;
-  margin: 10px;
-}
-
-.static-footer-live-info{
   
 }
 
-.image-size-set{
-  object-fit:cover;
-  width: 230px;
-  height:230px;
+.static-main-highlight-elements{
+  width: 25%;
+  height: 100%;
+  text-align: left;
+  list-style-type : none;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.static-main-highlist-text{
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: black;
+  /* z-index: 1; */
+}
+
+/* --------------------------------------------------Live Info Main 맨 마지막---------------------------------------------------- */
+
+.static-main-live-info{
+  padding: 10px;
+
+  display: flex;
+
+  overflow: hidden;
+}
+
+.static-main-live-info-elements{
+  list-style-type: none;
+
+  width: 40%;
+  height: 40%;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.static-main-live-info-text{
+  background-color: white;
+
+  color: black;
+}
+
+/* --------------------------------------------static-footer-category------------------------------------------------------ */
+
+.static-footer-category{
+  display: flex;
+  list-style: none;
+  padding: 30px 5px;
+}
+
+.static-footer-category-elements{
+  border: 1px solid lightgray;
+  background-color: lightgray;
+  justify-content: space-around;
+
+  color:grey;
+  
+  width: auto;
+  max-width: 15%;
+  padding: 2px;
+  margin: 0px 10px;
+  border-radius: 6px;
+  display: flex;
+}
+
+/* --------------------------------------------static-footer-company-info------------------------------------------------------ */
+
+.static-footer-company-info{
+  list-style: none;
+  padding: 5px 5px;
+}
+
+.static-footer-company-info-elements{
+  padding: 15px 10px;
+  color:grey;
+}
+
+/* --------------------------------------------static-footer-law-info------------------------------------------------------ */
+
+.static-footer-law-info{
+  list-style: none;
+  padding: 5px 5px;
+}
+
+.static-footer-law-info-elements{
+  padding: 5px 10px;
+  color:grey;
+}
+
+/* --------------------------------------------static-footer-icons------------------------------------------------------ */
+
+.static-footer-icons{
+  display: flex;
+  list-style: none;
+  padding: 30px 5px;
+}
+
+.static-footer-icons-elements{
+  justify-content: space-around;
+  
+  width: auto;
+  max-width: 15%;
+  padding: 2px;
+  margin: 0px 10px;
+  display: flex;
+}
+
+/* ------------------------------------------------------이미지 관련----------------------------------------------------------- */
+
+.main-live-image-size-set{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.main-highlight-image-size-set{
+  width: 100%;
+  height:100%;
+  object-fit: cover;
 }
 
 .main-product-image-size-set{
@@ -156,7 +312,24 @@ li{
 }
 
 .header-image-size-set{
-  width: 30px;
-  height: 30px;
   object-fit:cover;
+  width: 25px;
+  height: 25px;
+}
+
+.footer-icons-image-size-set{
+  width: 50px;
+  height: 50px;
+}
+
+/* ------------------------------------------------------기타 메뉴 관련----------------------------------------------------------- */
+.menu-texts{
+  padding: 10px;
+}
+
+.menu-line{
+  width: 90%;
+  border: thin solid lightgrey;
+  align-items: center;
+  justify-self: center
 }
